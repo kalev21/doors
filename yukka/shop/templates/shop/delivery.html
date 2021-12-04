@@ -1,0 +1,24 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+
+{% block title %}
+    Доставка
+{% endblock %}
+
+{% block catalog %}
+<div class="content-center">
+    <section class="justify-content-center justify-content-lg-between p-4 border-bottom">
+    <h4 class="content-center">ДОСТАВКА</h4>
+    </section>
+    <div class="container">
+        <strong><ol>
+            {% for deliver in delivers %}
+                <li>{{ deliver.text }}</li>
+                <li>{{ deliver.up_text }}</li>
+                <li>{{ deliver.up_text_1 }}</li>
+            {% endfor %}
+        </ol></strong>
+    </div>
+
+</div>
+{% endblock %}

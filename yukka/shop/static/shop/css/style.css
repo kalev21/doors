@@ -1,0 +1,97 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #333;
+  }
+
+.underline-one {
+	color: #00bfff; /* Цвет обычной ссылки */
+    position: relative;
+    cursor: pointer;
+    text-decoration: none; /* Убираем подчеркивание */
+}
+.underline-one:after {
+	content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px; /* Высота линии */
+    background-color: black; /* Цвет подчеркивания при исчезании линии*/
+    transition: width 0.5s; /* Время эффекта */
+}
+
+.underline-one:hover:after {
+	content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px; /* Высота линии */
+    background-color: red; /* Цвет подчеркивания при появлении линии*/
+    transition: width 0.5s;  /* Время эффекта */
+}
+
+.content-center {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+/* блока карточек товара */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+
+  /* Создайте четыре одинаковых столбца, которые находятся рядом друг с другом */
+  .column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+
+  .column img {
+    margin-top: 5px;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+/*Эффекты при наведении на фото карточек товара */
+.hover-image-scale {
+    display: inline-block;
+    overflow: hidden; /* Скрываем всё за контуром */
+    position: relative;
+  }
+  .hover-image-scale img {
+    transition: 1s; /* Время эффекта */
+    display: block;
+    position: relative;
+  }
+  .hover-image-scale img:hover {
+    transform: scale(1.2); /* Увеличиваем масштаб */
+  }
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* Адаптивный макет - делает два столбца макет вместо четырех столбцов */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+/* Адаптивный макет - делает два столбца стека друг на друга, а не рядом друг с другом */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+  /* конец блока карточек товара */

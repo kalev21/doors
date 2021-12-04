@@ -1,0 +1,47 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+
+{% block title %}
+    Отзывы
+{% endblock %}
+
+{% block catalog %}
+<footer class="col-md-6 offset-md-3">
+    <section class="justify-content-center justify-content-lg-between p-4 border-bottom">
+    <h4 class="content-center">Отзывы</h4>
+    </section>
+    <form method="post">
+        {% csrf_token %}
+
+        {% for el in form %}
+            <div class="mb-3">
+                {{ el.label }}
+                {{ el }}
+            </div>
+        {% endfor %}
+        <button class="btn btn-danger" type="submit">Опубликовать</button>
+    </form>
+    <h3>{{ error }}</h3>
+
+    <div class="container">
+        {% for post in posts %}
+        <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">{{ post.author }}</h5>
+                <p class="card-text">{{ post.text|truncatewords:"20"}}</p>
+              </div>
+              <div class="card-footer">
+                  <small class="text-muted">Дата публикации {{ post.publish_date }}</small>
+              </div>
+            </div>
+        </div>
+      {% empty %}
+        <div class="content-center">
+            <h2>Пока нет отзывов</h2>
+        </div>
+      {% endfor %}
+    </div>
+
+</footer>
+{% endblock %}

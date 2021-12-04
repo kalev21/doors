@@ -1,0 +1,79 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+
+{% block title %}
+    Главная
+{% endblock %}
+
+{% block catalog %}
+<main class="text-center text-lg-start bg-light text-muted">
+    <section class="justify-content-center justify-content-lg-between p-4 border-bottom">
+        <h4 class="content-center">Главная</h4>
+    </section>
+    <div class="container">
+        <figure class="text-center">
+            <blockquote class="blockquote">
+                <h2>ДВЕРИ "ЮККА"</h2>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+                <p class="lead">Мы - официальный представитель фабрики "ЮККА" в Москве.<br>
+                Компания "ЮККА" производит межкомнатные двери для квартиры,
+                офиса и загородного дома c лучшим соотношением цены и
+                качества на рынке межкомнатных дверей.<br> Экологически чистые
+                    и безопасные ПВХ покрытия обеспечивают долговечность текстуры и цвета двери.</p>
+            </figcaption>
+        </figure>
+        <h2 class="content-center">Почему выбирают нас:</h2><br>
+        <div class="row justify-content-evenly">
+            <div class="col-4">
+                <ul>
+                    <li><strong>БОЛЬШОЙ ОПЫТ</strong>
+                        <ul>
+                            <li>Более 15 лет на рынке межкомнатных дверей</li>
+                        </ul>
+                    </li><br>
+                    <strong><li>ПОДДЕРЖКА КЛИЕНТОВ</strong>
+                        <ul>
+                            <li>Оперативная консультация по вопросам</li>
+                        </ul>
+                    </li><br>
+                    <strong><li>КАЧЕСТВО ПРОДУКЦИИ</strong>
+                        <ul>
+                            <li>Стабильное и высокое качество выпускаемой продукции</li>
+                        </ul>
+                    </li><br>
+                    <strong><li>ДОСТАВКА</strong>
+                        <ul>
+                            <li>Бережная доставка Вашего товара в удобное для Вас время</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <ul>
+                    <li><strong>ГИБКИЙ ПОДХОД</strong>
+                        <ul>
+                            <li>К каждому клиенту</li>
+                        </ul>
+                    </li><br>
+                    <strong><li>СРОКИ ИЗГОТОВЛЕНИЯ</strong>
+                        <ul>
+                            <li>Соблюдение договорных сроков изготовления продукции</li>
+                        </ul>
+                    </li><br>
+                    <strong><li>ЭКО ПРОИЗВОДСТВО</strong>
+                        <ul>
+                            <li>Экологически чистое и без отходное производство</li>
+                        </ul>
+                    </li><br>
+                    <strong><li>ЗАМЕР И УСТАНОВКА</strong>
+                        <ul>
+                            <li>Замер, а также быстрый и качественный монтаж дверных блоков</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
